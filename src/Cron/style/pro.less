@@ -1,0 +1,67 @@
+@import (reference) '../../style/themes/default';
+
+@tech-cron-expression-prefix-cls: ~'@{tech-prefix}-cron-expression';
+
+.@{tech-cron-expression-prefix-cls}-pro {
+  .@{tech-cron-expression-prefix-cls}-frequency-input {
+    display: inline-flex;
+    width: 100%;
+    padding: 8px 24px;
+    font-size: 16px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+
+    .@{tech-cron-expression-prefix-cls}-editable-content {
+      min-width: 10px;
+      padding: 0 5px;
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
+
+  .@{tech-cron-expression-prefix-cls}-active-step {
+    background-color: #e6f7ff;
+  }
+
+  .@{tech-cron-expression-prefix-cls}-active-step-font {
+    color: #1890ff;
+  }
+  .@{tech-cron-expression-prefix-cls}-active-error {
+    background-color: #ec637a;
+  }
+
+  .@{tech-cron-expression-prefix-cls}-active-error-font {
+    color: red;
+  }
+
+  .@{tech-cron-expression-prefix-cls}-desc-options {
+    display: inline-flex;
+    .@{tech-cron-expression-prefix-cls}-dec {
+      padding: 5px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.@{tech-cron-expression-prefix-cls}-desc-container {
+  .ant-tooltip-inner {
+    ul,
+    li {
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      > span {
+        width: 50px;
+      }
+      > div {
+        max-width: 152px;
+      }
+
+      display: flex;
+      padding: 0 16px;
+    }
+  }
+}

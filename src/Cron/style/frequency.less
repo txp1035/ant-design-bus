@@ -1,0 +1,62 @@
+@import (reference) '../../style/themes/default';
+
+@tech-cron-expression-prefix-cls: ~'@{tech-prefix}-cron-expression';
+
+.@{tech-cron-expression-prefix-cls}-frequency-row {
+  width: 100%;
+  min-width: 700px;
+  margin-bottom: 8px;
+  .@{tech-cron-expression-prefix-cls}-step {
+    width: 174px;
+  }
+  .@{tech-cron-expression-prefix-cls}-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    margin-left: 2px;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 2px;
+    .@{tech-cron-expression-prefix-cls}-delete {
+      margin-right: 14px;
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 16px;
+    }
+    .@{tech-cron-expression-prefix-cls}-input {
+      margin: 0 8px;
+    }
+  }
+  .@{tech-cron-expression-prefix-cls}-type {
+    margin-left: 0;
+    .@{tech-cron-expression-prefix-cls}-clock {
+      margin: 0 14px;
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 16px;
+    }
+  }
+}
+
+.@{tech-cron-expression-prefix-cls}-empty-step,
+.@{tech-cron-expression-prefix-cls}-empty-appoint {
+  display: inline-block;
+  height: 40px;
+  margin: 0 2px;
+  padding-left: 24px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  line-height: 40px;
+
+  /* width: 174px; */
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 2px;
+}
+
+.@{tech-cron-expression-prefix-cls}-empty-step {
+  width: 174px;
+}
+
+.@{tech-cron-expression-prefix-cls}-empty-appoint {
+  width: 336px;
+  margin-right: 0;
+}

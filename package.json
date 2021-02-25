@@ -1,0 +1,95 @@
+{
+  "name": "ant-design-bus",
+  "version": "1.0.1",
+  "description": "This is a business component based on ant design",
+  "scripts": {
+    "start": "dumi dev",
+    "lint:fix": "eslint --fix  --cache --ext .js,.jsx,.ts,.tsx **/**",
+    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx ./src",
+    "lintfix:js": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+    "lint:style": "stylelint \"**/*.less\"",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --fix --ext .js,.jsx,.ts,.tsx --format=pretty",
+    "lintfix:style": "stylelint --fix \"**/*.less\"",
+    "prettier": "prettier -c --write \"**/*\"",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d dist",
+    "build": "father-build",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "release": "npm run build && npm publish"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShawDanon/ant-design-bus/tree/master"
+  },
+  "homepage": "https://github.com/ShawDanon/ant-design-bus/tree/master",
+  "authors": [
+    "tangxiaoping <shawdanon@foxmail.com> (https://github.com/ShawDanon)"
+  ],
+  "bugs": {
+    "url": "https://github.com/ShawDanon/ant-design-bus/issues"
+  },
+  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint --syntax --fix less",
+    "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.2.1",
+    "antd": "^4.3.5",
+    "classnames": "^2.2.6",
+    "cron-parser": "^2.15.0",
+    "crons": "^1.0.11",
+    "cronstrue": "^1.94.0",
+    "enzyme": "^3.11.0",
+    "lodash": "^4.17.19",
+    "mockdate": "^3.0.2",
+    "moment": "^2.27.0",
+    "react": "^16.12.0",
+    "react-contenteditable": "^3.3.4",
+    "txp": "^1.0.3",
+    "txp-utils": "^1.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "@types/enzyme": "^3.10.5",
+    "@types/jest": "^26.0.0",
+    "@umijs/fabric": "^2.5.6",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.0.5",
+    "conventional-changelog-cli": "^2.0.34",
+    "dumi": "^1.0.8",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
+    "eslint": "^7.20.0",
+    "eslint-import-resolver-webpack": "^0.12.1",
+    "father-build": "^1.17.2",
+    "gh-pages": "^3.0.0",
+    "husky": "^4.2.5",
+    "jest-canvas-mock": "^2.2.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "stylelint": "^13.11.0"
+  }
+}
