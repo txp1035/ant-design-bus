@@ -1,27 +1,38 @@
 # ant-design-bus
 
-## Getting Started
+[![NPM version](https://img.shields.io/npm/v/ant-design-bus.svg?style=flat)](https://npmjs.org/package/ant-design-bus)
+[![NPM downloads](http://img.shields.io/npm/dm/ant-design-bus.svg?style=flat)](https://npmjs.org/package/ant-design-bus)
 
-Install dependencies,
+## Usage
 
-```bash
-$ npm i or yarn
-```
+TODO
 
-Start the dev server,
+## Options
 
-```bash
-$ npm start
-```
+TODO
 
-Build documentation,
+## Development
 
 ```bash
-$ npm run docs:build
+# install dependencies
+$ pnpm install
+
+# develop library by docs demo
+$ pnpm start
+
+# build library source code
+$ pnpm run build
+
+# build library source code in watch mode
+$ pnpm run build:watch
+
+# build docs
+$ pnpm run docs:build
+
+# check your project for potential problems
+$ pnpm run doctor
 ```
 
-Build library via `father-build`,
+## LICENSE
 
-```bash
-$ npm run build
-```
+MIT
